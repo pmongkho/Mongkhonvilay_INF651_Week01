@@ -1,4 +1,3 @@
-
 //change title to Hello world
 const myHeading = document.querySelector("h1")
 myHeading.textContent = "Hello world!"
@@ -18,18 +17,16 @@ myImage.onclick = () => {
 //create buttom
 let myButton = document.querySelector("button")
 
-
 //function to set username
 function setUserName() {
 	const myName = prompt("Please enter your name.")
 
-    if(!myName){
-        setUserName();
-    }else{
-       localStorage.setItem("name", myName)
-	myHeading.textContent = `Mozilla is cool, ${myName}` 
-    }
-	
+	if (!myName) {
+		setUserName()
+	} else {
+		localStorage.setItem("name", myName)
+		myHeading.textContent = `Mozilla is cool, ${myName}`
+	}
 }
 
 //call condition block
